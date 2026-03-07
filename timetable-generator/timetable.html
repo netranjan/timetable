@@ -1,0 +1,100 @@
+
+<html>
+<head>
+
+<style>
+
+body{
+font-family:Arial;
+background:#f4f6f7;
+margin:20px;
+}
+
+h1{
+text-align:center;
+}
+
+.tabs{
+text-align:center;
+margin-bottom:20px;
+}
+
+.tabs button{
+padding:10px 20px;
+margin:5px;
+border:none;
+background:#3498db;
+color:white;
+cursor:pointer;
+border-radius:5px;
+}
+
+.tabs button:hover{
+background:#2980b9;
+}
+
+table{
+border-collapse:collapse;
+width:100%;
+margin-bottom:40px;
+background:white;
+}
+
+th,td{
+border:1px solid #ccc;
+padding:8px;
+text-align:center;
+}
+
+th{
+background:#2c3e50;
+color:white;
+}
+
+.break{
+background:#f5b7b1;
+}
+
+.lecture{
+background:#d6eaf8;
+}
+
+.practical{
+background:#d5f5e3;
+}
+
+.section{
+display:none;
+}
+
+</style>
+
+<script>
+
+function showSection(id){
+
+let sections=document.getElementsByClassName("section")
+
+for(let s of sections){
+s.style.display="none"
+}
+
+document.getElementById(id).style.display="block"
+
+}
+
+</script>
+
+</head>
+
+<body>
+
+<h1>Academic Timetable</h1>
+
+<div class="tabs">
+<button onclick="showSection('class')">Class Timetable</button>
+<button onclick="showSection('teacher')">Teacher Timetable</button>
+<button onclick="showSection('lab')">Lab Timetable</button>
+</div>
+
+<div id='class' class='section' style='display:block'><h2>Class Timetables</h2><h3>SY</h3><table><tr><th>Day</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th></tr><tr><td><b>Mon</b></td><td class='lecture'>OS<br>T4</td><td class='lecture'>OS<br>T4</td><td class='break'>BREAK</td><td class='practical'>CN<br>Batch A</td><td></td><td class='lecture'>CN<br>T2</td></tr><tr><td><b>Tue</b></td><td class='lecture'>CN<br>T2</td><td class='lecture'>CN<br>T2</td><td class='break'>BREAK</td><td></td><td></td><td></td></tr><tr><td><b>Wed</b></td><td></td><td></td><td class='break'>BREAK</td><td></td><td></td><td></td></tr><tr><td><b>Thu</b></td><td></td><td></td><td class='break'>BREAK</td><td></td><td></td><td></td></tr><tr><td><b>Fri</b></td><td></td><td></td><td class='break'>BREAK</td><td></td><td></td><td></td></tr></table><h3>TY</h3><table><tr><th>Day</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th></tr><tr><td><b>Mon</b></td><td class='lecture'>SE<br>T5</td><td class='lecture'>SE<br>T5</td><td class='lecture'>DBMS Advanced<br>T1</td><td class='break'>BREAK</td><td class='lecture'>AI<br>T3</td><td class='lecture'>AI<br>T3</td></tr><tr><td><b>Tue</b></td><td class='lecture'>AI<br>T3</td><td></td><td class='lecture'>DBMS Advanced<br>T1</td><td class='break'>BREAK</td><td></td><td></td></tr><tr><td><b>Wed</b></td><td></td><td></td><td></td><td class='break'>BREAK</td><td></td><td></td></tr><tr><td><b>Thu</b></td><td></td><td></td><td></td><td class='break'>BREAK</td><td></td><td></td></tr><tr><td><b>Fri</b></td><td></td><td></td><td></td><td class='break'>BREAK</td><td></td><td></td></tr></table><h3>BE</h3><table><tr><th>Day</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th></tr><tr><td><b>Mon</b></td><td class='practical'>Machine Learning<br>Batch A</td><td class='break'>BREAK</td><td class='lecture'>Advanced Networks<br>T2</td><td class='lecture'>Software Project<br>T5</td><td class='lecture'>Software Project<br>T5</td><td class='lecture'>Machine Learning<br>T6</td></tr><tr><td><b>Tue</b></td><td class='lecture'>Machine Learning<br>T6</td><td class='break'>BREAK</td><td class='lecture'>Advanced Networks<br>T2</td><td></td><td></td><td></td></tr><tr><td><b>Wed</b></td><td></td><td class='break'>BREAK</td><td></td><td></td><td></td><td></td></tr><tr><td><b>Thu</b></td><td></td><td class='break'>BREAK</td><td></td><td></td><td></td><td></td></tr><tr><td><b>Fri</b></td><td></td><td class='break'>BREAK</td><td></td><td></td><td></td><td></td></tr></table></div><div id='teacher' class='section'><h2>Teacher Timetables</h2><h3>T1</h3><table><tr><th>Day</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th></tr><tr><td><b>Mon</b></td><td class='lecture'>DBMS<br>SY</td><td></td><td class='lecture'>DBMS Advanced<br>TY</td><td class='lecture'>DBMS<br>SY</td><td></td><td class='lecture'>DBMS<br>SY</td></tr><tr><td><b>Tue</b></td><td class='lecture'>DBMS<br>SY</td><td class='lecture'>DBMS<br>SY</td><td class='lecture'>DBMS Advanced<br>TY</td><td></td><td></td><td></td></tr><tr><td><b>Wed</b></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><b>Thu</b></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><b>Fri</b></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></table><h3>T2</h3><table><tr><th>Day</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th></tr><tr><td><b>Mon</b></td><td class='lecture'>CN<br>SY</td><td></td><td class='lecture'>Advanced Networks<br>BE</td><td class='lecture'>CN<br>SY</td><td></td><td class='lecture'>CN<br>SY</td></tr><tr><td><b>Tue</b></td><td class='lecture'>CN<br>SY</td><td class='lecture'>CN<br>SY</td><td class='lecture'>Advanced Networks<br>BE</td><td></td><td></td><td></td></tr><tr><td><b>Wed</b></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><b>Thu</b></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><b>Fri</b></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></table><h3>T4</h3><table><tr><th>Day</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th></tr><tr><td><b>Mon</b></td><td class='lecture'>OS<br>SY</td><td class='lecture'>OS<br>SY</td><td></td><td></td><td></td><td></td></tr><tr><td><b>Tue</b></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><b>Wed</b></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><b>Thu</b></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><b>Fri</b></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></table><h3>T3</h3><table><tr><th>Day</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th></tr><tr><td><b>Mon</b></td><td class='lecture'>AI<br>TY</td><td></td><td class='lecture'>AI<br>TY</td><td></td><td class='lecture'>AI<br>TY</td><td class='lecture'>AI<br>TY</td></tr><tr><td><b>Tue</b></td><td class='lecture'>AI<br>TY</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><b>Wed</b></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><b>Thu</b></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><b>Fri</b></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></table><h3>T5</h3><table><tr><th>Day</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th></tr><tr><td><b>Mon</b></td><td class='lecture'>SE<br>TY</td><td class='lecture'>SE<br>TY</td><td class='lecture'>SE<br>TY</td><td class='lecture'>Software Project<br>BE</td><td class='lecture'>Software Project<br>BE</td><td></td></tr><tr><td><b>Tue</b></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><b>Wed</b></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><b>Thu</b></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><b>Fri</b></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></table><h3>T6</h3><table><tr><th>Day</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th></tr><tr><td><b>Mon</b></td><td class='lecture'>Machine Learning<br>BE</td><td></td><td class='lecture'>Machine Learning<br>BE</td><td></td><td class='lecture'>Machine Learning<br>BE</td><td class='lecture'>Machine Learning<br>BE</td></tr><tr><td><b>Tue</b></td><td class='lecture'>Machine Learning<br>BE</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><b>Wed</b></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><b>Thu</b></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><b>Fri</b></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></table></div><div id='lab' class='section'><h2>Lab Timetables</h2><h3>L1</h3><table><tr><th>Day</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th></tr><tr><td><b>Mon</b></td><td class='practical'>DBMS<br>SY Batch A</td><td></td><td></td><td class='practical'>DBMS<br>SY Batch B</td><td></td><td></td></tr><tr><td><b>Tue</b></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><b>Wed</b></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><b>Thu</b></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><b>Fri</b></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></table><h3>L2</h3><table><tr><th>Day</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th></tr><tr><td><b>Mon</b></td><td class='practical'>CN<br>SY Batch B</td><td></td><td></td><td class='practical'>CN<br>SY Batch A</td><td></td><td></td></tr><tr><td><b>Tue</b></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><b>Wed</b></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><b>Thu</b></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><b>Fri</b></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></table><h3>L3</h3><table><tr><th>Day</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th></tr><tr><td><b>Mon</b></td><td class='practical'>Machine Learning<br>BE Batch A</td><td></td><td class='practical'>Machine Learning<br>BE Batch B</td><td></td><td></td><td></td></tr><tr><td><b>Tue</b></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><b>Wed</b></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><b>Thu</b></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><b>Fri</b></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></table></div></body></html>
