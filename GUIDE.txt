@@ -1,0 +1,27 @@
+Run locally
+
+Install dependencies
+
+pip install -r requirements.txt
+
+Run server
+
+uvicorn main:app --reload
+
+API:
+
+POST http://localhost:8000/generate
+NodeJS request example
+const axios = require("axios")
+
+async function generateTimetable(config) {
+
+ const res = await axios.post(
+  "http://localhost:8000/generate",
+  config
+ )
+
+ console.log(res.data)
+}
+
+generateTimetable(config)
